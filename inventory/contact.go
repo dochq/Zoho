@@ -75,7 +75,7 @@ type Address struct {
 	Street2   string `json:"street2"`
 	City      string `json:"city"`
 	State     string `json:"state"`
-	Zip       int    `json:"zip"`
+	Zip       string `json:"zip"`
 	Country   string `json:"country"`
 }
 
