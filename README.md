@@ -14,7 +14,7 @@ This will be a long project, with alot of boilerplate code that may benefit from
 - [ ] Desk
 - [ ] Docs
 - [ ] [Expense](https://github.com/schmorrison/Zoho/tree/master/expense)
-- [ ] Inventory
+- [ ] [Inventory](https://github.com/schmorrison/Zoho/tree/master/inventory)
 - [ ] [Invoice](https://github.com/schmorrison/Zoho/tree/master/invoice)
 - [ ] Mail
 - [ ] Meeting
