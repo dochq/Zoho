@@ -96,7 +96,7 @@ type Documents struct {
 }
 
 type CreateSalesOrderResponse struct {
-	Code    int64  `json:"code"`
-	Message string `json:"message"`
-	SalesOrder
+	Code       int64      `json:"code"`
+	Message    string     `json:"message"`
+	SalesOrder SalesOrder `json:"sales_order"`
 }

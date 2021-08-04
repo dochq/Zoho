@@ -42,6 +42,7 @@ func (c *API) CreateContact(request Contact, enablePortal bool) (data CreateCont
 }
 
 type Contact struct {
+	ContactID        string           `json:"contact_id"`
 	ContactName      string           `json:"contact_name"`
 	CompanyName      string           `json:"company_name"`
 	PaymentTerms     int              `json:"payment_terms"`
@@ -104,50 +105,7 @@ type DefaultTemplates struct {
 }
 
 type CreateContactResponse struct {
-	Code    int    `json:"code"`
-	Message string `json:"message"`
-	Contact struct {
-		ContactID                        string  `json:"contact_id"`
-		ContactName                      string  `json:"contact_name"`
-		CompanyName                      string  `json:"company_name"`
-		HasTransaction                   bool    `json:"has_transaction"`
-		ContactType                      string  `json:"contact_type"`
-		IsTaxable                        bool    `json:"is_taxable"`
-		TaxID                            string  `json:"tax_id"`
-		TaxName                          string  `json:"tax_name"`
-		TaxPercentage                    float64 `json:"tax_percentage"`
-		TaxExemptionID                   string  `json:"tax_exemption_id"`
-		TaxAuthorityID                   string  `json:"tax_authority_id"`
-		GSTNo                            string  `json:"gst_no"`
-		GSTTreatment                     string  `json:"gst_treatment"`
-		IsLinkedWithZohocrm              bool    `json:"is_linked_with_zohocrm"`
-		Website                          string  `json:"website"`
-		PrimaryContactID                 string  `json:"primary_contact_id"`
-		PaymentTerms                     int64   `json:"payment_terms"`
-		PaymentTermsLabel                string  `json:"payment_terms_label"`
-		CurrencyID                       string  `json:"currency_id"`
-		CurrencyCode                     string  `json:"currency_code"`
-		CurrencySymbol                   string  `json:"currency_symbol"`
-		LanguageCode                     string  `json:"language_code"`
-		OutstandingReceivableAmount      float64 `json:"outstanding_receivable_amount"`
-		OutstandingReceivableAmountBcy   float64 `json:"outstanding_receivable_amount_bcy"`
-		UnusedCreditsReceivableAmount    float64 `json:"unused_credits_receivable_amount"`
-		UnusedCreditsReceivableAmountBcy float64 `json:"unused_credits_receivable_amount_bcy"`
-		Status                           string  `json:"status"`
-		PaymentReminderEnabled           bool    `json:"payment_reminder_enabled"`
-		CustomFields                     []struct {
-			Value string `json:"value"`
-			Index int64  `json:"index"`
-			Label string `json:"label"`
-		} `json:"custom_fields"`
-		BillingAddress   Address          `json:"billing_address"`
-		ShippingAddress  Address          `json:"shipping_address"`
-		Facebook         string           `json:"facebook"`
-		Twitter          string           `json:"twitter"`
-		ContactPersons   []ContactPerson  `json:"contact_persons"`
-		DefaultTemplates DefaultTemplates `json:"default_templates"`
-		Notes            string           `json:"notes"`
-		CreatedTime      string           `json:"created_time"`
-		LastModifiedTime string           `json:"last_modified_time"`
-	} `json:"contact"`
+	Code    int     `json:"code"`
+	Message string  `json:"message"`
+	Contact Contact `json:"contact"`
 }
