@@ -46,7 +46,7 @@ type Contact struct {
 	ContactName      string           `json:"contact_name,omitempty"`
 	CompanyName      string           `json:"company_name,omitempty"`
 	PaymentTerms     int              `json:"payment_terms,omitempty"`
-	CurrencyID       int64            `json:"currency_id,omitempty"`
+	CurrencyID       string           `json:"currency_id,omitempty"`
 	Website          string           `json:"website,omitempty"`
 	ContactType      string           `json:"contact_type,omitempty"`
 	BillingAddress   Address          `json:"billing_address,omitempty"`
