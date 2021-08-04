@@ -7,4 +7,4 @@ require (
 	google.golang.org/appengine v1.6.7
 )
 
-replace github.com/schmorrison/Zoho v1.0.0 => github.com/dochq/Zoho v1.0.1
+replace github.com/schmorrison/Zoho v1.0.0 => github.com/dochq/Zoho v1.0.2
